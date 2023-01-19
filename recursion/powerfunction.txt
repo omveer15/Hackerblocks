@@ -1,0 +1,24 @@
+/******************************power function using recursion************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{   
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the base ");
+	    int a=sc.nextInt();
+	    System.out.println("Enter the power ");
+	    int x=sc.nextInt();
+	    
+		System.out.println("Answer="+pow(a,x));
+	}
+	
+	public static int pow(int a,int x)
+    {
+        if(x==0)
+            return 1;
+            
+        int power=pow(a,x-1);
+        return power*a;
+    }
+}
